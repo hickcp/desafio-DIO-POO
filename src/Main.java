@@ -1,6 +1,4 @@
-import br.com.desafio.domain.Conteudo;
-import br.com.desafio.domain.Curso;
-import br.com.desafio.domain.Mentoria;
+import br.com.desafio.domain.*;
 
 import java.time.LocalDate;
 
@@ -25,8 +23,51 @@ public class Main {
         mentoria.setData(LocalDate.now());
 
 
-        System.out.println(curso1);
+        /*System.out.println(curso1);
         System.out.println(curso2);
-        System.out.println(mentoria);
+        System.out.println(mentoria); */
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descricao Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+        Dev devHenrique = new Dev();
+        devHenrique.setNome("Henrique");
+        devHenrique.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos Inscritos - Henrique: " + devHenrique.getConteudosInscritos());
+        devHenrique.progredir();
+        devHenrique.progredir();
+        devHenrique.progredir();
+        System.out.println("\n----------------------");
+        System.out.println("Conteudos Inscritos - Henrique: " + devHenrique.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos - Henrique: " + devHenrique.getConteudosConcluidos());
+        System.out.println("XP Ganho: " + devHenrique.calcularTotalXp());
+        System.out.println("\n----------------------");
+
+
+
+        Dev devJoao = new Dev();
+        devJoao.setNome("Joao");
+        devJoao.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos Inscritos - Joao: " + devJoao.getConteudosInscritos());
+        System.out.println("\n----------------------");
+        devJoao.progredir();
+        System.out.println("Conteudos Inscritos- Joao: " + devJoao.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos - Joao: " + devJoao.getConteudosConcluidos());
+        System.out.println("XP Ganho: " + devJoao.calcularTotalXp());
+
+
+
+
+
+
+
+
+
+
+
     }
 }

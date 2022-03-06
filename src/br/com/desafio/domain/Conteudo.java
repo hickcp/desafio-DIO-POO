@@ -2,7 +2,7 @@ package br.com.desafio.domain;
 
 public abstract class Conteudo { //classe abstrata -> Não consegue criar um conteudo (Conteudo conteudo = new Conteudo)
     //Classe Conteudo serve para implementar os atributos na classe filha para evitar a repetição de código
-    protected static final double XP_PADRAO = 10d;
+    protected static final double XP_PADRAO = 72d;
     private String titulo;
     private String descricao;
 
