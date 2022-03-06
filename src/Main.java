@@ -1,21 +1,21 @@
+import br.com.desafio.domain.Conteudo;
 import br.com.desafio.domain.Curso;
 import br.com.desafio.domain.Mentoria;
 
 import java.time.LocalDate;
 
+
 public class Main {
     public static void main(String[] args) {
         Curso curso1 = new Curso();
-
-
-        curso1.setDescreicao("descriçao curso java");
-        curso1.setTitulo("Curso Java");
-        curso1.setCargaHoraria(8);
-
         Curso curso2 = new Curso();
 
 
-        curso2.setDescreicao("descriçao curso JS");
+        curso1.setDescricao("descriçao curso java");
+        curso1.setTitulo("Curso Java");
+        curso1.setCargaHoraria(8);
+
+        curso2.setDescricao("descriçao curso JS");
         curso2.setTitulo("Curso JS");
         curso2.setCargaHoraria(5);
 
